@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Discord Message Sender</title>
+  </head>
+  <body>
+    <h1>Discord Message Sender</h1>
+    <form action="/" method="post">
+      <label for="channel_id">Channel ID:</label>
+      <input type="text" id="channel_id" name="channel_id" required><br><br>
+
+      <label for="messages">Messages:</label><br>
+      <textarea id="messages" name="messages" rows="10" cols="50" required></textarea><br><br>
+
+      <label for="delay">Delay between messages (seconds):</label>
+      <input type="number" id="delay" name="delay" step="0.1" min="0" value="0.1" required><br><br>
+
+      <input type="submit" value="Send Messages">
+    </form>
+    <form action="/stop" method="post">
+      <input type="submit" value="Stop Sending" formmethod="get">
+    </form>
+  </body>
+</html>
